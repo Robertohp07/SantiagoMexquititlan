@@ -1,0 +1,686 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+body{
+    width: 100%;
+}
+body::-webkit-scrollbar,.sector::-webkit-scrollbar{
+    width: 10px;
+    background-color: #bdbbbb;
+}
+body::-webkit-scrollbar-thumb,.sector::-webkit-scrollbar-thumb{
+    background-color: #202031;
+    border-radius: 5px;
+}
+
+/*Estilos del Fondo*/
+.fond{
+    width: 100%;
+    height: 90vh;
+    background: #00000077;
+    position:absolute;
+    margin: -700px -100px 0px 0px;
+   padding-top:110px ;
+}
+
+.carousel-container {
+    position: relative;  
+    width: 100%;
+    height: calc(90vh); /* Ajusta la altura según tus necesidades */
+    background-color: #000000b9; /* Color de fondo del carrusel */
+    overflow: hidden; /* Oculta las imágenes que se salen del contenedor */
+   
+}
+
+/* Estilos para las imágenes del carrusel */
+.carousel-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    object-fit: cover; /* Ajusta la imagen al tamaño del contenedor */
+    opacity: 0.0; /* Inicialmente todas las imágenes están semi-transparentes */
+    transition: opacity 2s ease-in-out; /* Transición suave de opacidad */
+}
+
+/* La primera imagen se mostrará con opacidad completa */
+.carousel-image:first-child {
+    opacity: 1;
+}
+
+/*Estilos del menu de navegacion*/
+.logo{
+    width: 15%;
+    border-radius: 5%;
+    margin:  10px;
+}
+.menu-bar{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+ 
+
+}
+.items{
+    width:auto;
+    display: flex;
+}
+ul{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-around;
+  
+}
+li{
+    list-style: none;
+   
+}
+.ancla{
+    text-decoration: none;
+    color: #f0f0f0;
+    font-size: 16px;
+    font-weight: 400;
+    text-shadow: 5px 5px 6px rgba(0, 0, 0, 0.8);
+    padding: 10px;
+  
+}
+.ancla:hover{
+    color:#fff ;
+    border-bottom: #fff  solid 2px;
+    transition: all .10ms;
+}
+
+label:hover{
+    cursor: pointer;
+}
+#active{
+    border-bottom: #fff solid 2px;
+    color: #fff;
+}
+/*Texto*/
+.cont-text{
+    width: 40%;
+    margin: 100px -0px 100px 60px;
+
+}
+.titu{
+    font-size: 52px;
+    color: #ffffff;
+    font-family: Bahnschrift SemiCondensed;
+    text-shadow: 5px 5px 6px rgba(0, 0, 0, 0.8);
+}
+
+.pie{
+    color: #ffffff;
+    font-size: 20px;
+    text-shadow: 5px 5px 6px rgba(0, 0, 0, 0.8);
+}
+/*Frase*/
+.cont-frase{
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+.frase{
+    font-size: 18px;
+    text-align: center;
+    color: #8a8989;
+}
+
+/*Estilos tarjetas*/
+.cont-tarjet{
+    width: 90%;
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  
+}
+.tarjeta{
+    width: 270px;
+    height: 300px;
+    background: #ffffff;
+    border-radius: 5px;
+    box-shadow: 3px 3px 15px 3px #00000065;  
+ 
+}
+
+.circle{
+    position:absolute;
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+    margin-top: -60px;
+    margin-left: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+#uno{
+    background: linear-gradient(to bottom , #02f5d1, #ce2e8b );
+}
+#dos{
+    background: linear-gradient(to bottom , #e60202, #ee6c02 );
+}
+#tres{
+    background: linear-gradient(to bottom , #ff50d9, #bb023f );  
+}
+#cuatro{
+    background: linear-gradient(to bottom , #ff7c01, #fdf900 );
+}
+h2{
+    text-align: center;
+    font-weight: 400;
+    font-size: 28px;
+    color: #24253f;
+    
+}
+.text-tarjet{
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+   padding-top: 80px;
+}
+a{
+    text-decoration: none;
+}
+.info{
+    text-align: center;
+    color: #8a8989;
+    padding: 24px 10px;
+    font-size: 16px;
+}
+
+.tarjeta:hover{
+    cursor: pointer;
+    transition: all .3s;
+    background: #f2f3eb; 
+    translate: 0%  -3%;
+}
+h2:hover,.info:hover{
+    color: #1a1a2e;
+}
+
+
+
+/*HistoriS*/
+.cont-fond{
+    width: 100%;
+    height: 100vh;    
+}
+#historia{
+    background: url(../img/Fondo-4.jpeg);
+    background-size: cover;
+    background-position: center;
+    z-index: 10;
+}
+#barrios{
+    background: url(../img/Fonfo-10.jpeg);
+    background-size: cover;
+    background-position: center;
+    z-index: 10;
+}
+#tradiciones{
+    background: url(../img/Fondo-8.jpeg);
+    background-size: cover;
+    background-position: center;
+    z-index: 10;
+}
+
+#oficios{
+    background: url(../img/Fondo-5.jpg);
+    background-size: cover;
+    background-position: center;
+    z-index: 10;
+}
+#infra{
+    background: url(../img/Fondo-3.jpeg);
+    background-size: cover;
+    background-position: center;
+    z-index: 10;
+}
+#conta{
+    background: url(../img/barrio-21.jpg);
+    background-size: cover;
+    background-position: center;
+    z-index: 10;
+}
+#turismo{
+    background: url(../img/Fondo-9.jpg);
+    background-size: cover;
+    background-position: center;
+    z-index: 10;
+}
+#arte{
+    background: url(../img/texturA.jpg);
+    background-size: cover;
+    background-position: center;
+    z-index: 10;
+}
+#gastro{
+    background: url(../img/gastronomia.jpg);
+    background-size: cover;
+    background-position: center;
+    z-index: 10;
+}
+#eventos{
+    background: url(../img/fondo-7.jpg);
+    background-size: cover;
+    background-position: center;
+    z-index: 10;
+}
+.opacidad{
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(to right, #000000e3, #0000002d);
+
+}
+.cont-parrafos{
+    width: 100%;
+    background-color: #eeebeb;
+    margin-left: auto;
+    margin-right: auto;
+}
+.titles{
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    background: #1a1a2e;
+    color: #fff;
+    font-weight: 300;
+    
+}
+h1{
+    font-size: 47px;
+    font-weight: 300;
+    padding: 30px;
+}
+.cont-section{
+    width: 100%;
+    background: #fff;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    align-items: self-start;
+ 
+}
+.section>p{
+    padding: 20px;
+    font-size: 18px;
+    color: #525151;
+    text-align: justify;
+}
+.img-section{
+    width: 50%;
+    height: auto;
+    border-radius: 10px;
+    margin: 25px;
+}
+.text{
+    width: 80%;
+    margin: auto  auto auto;
+ 
+ 
+}
+h3{
+    font-size: 26px;
+    font-weight: 300;
+    padding: 20px 0px 0px 20px;
+
+}
+
+
+/*evets*/
+.cont-events{
+    width: 90%;
+    background: #ffffff ;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 10px;
+    
+}
+.levels{
+    width: 100%;
+    display: flex;
+
+}
+.fechs{
+    width: 15%;
+    padding: 10px 20px;
+    background: #e9e5e5;
+    border-radius: 5px;
+    text-align: center;
+}
+.d2{
+    
+    font-size: 34px;
+    font-weight: 400;
+}
+.d1{
+    margin-top: 0px;
+    font-size: 24px;
+}
+
+#f1{
+    background: linear-gradient(to left , #02f7c2, #62eec4 );
+}
+#f2{
+    background: linear-gradient(to left , #f89501, #df5303 );
+}
+#f3{
+    background: linear-gradient(to left , #bb1cfa, #7402f7 );
+}
+#f4{
+    background: linear-gradient(to left , #fab41c, #ffee00 );
+}
+#f5{
+    background: linear-gradient(to left , #f05757, #ff0000 );
+}
+#f6{
+    background: linear-gradient(to left , #00cf8a,#03863e );
+}
+#f7{
+    background: linear-gradient(to left , #ffd000,#ff5e00 );
+}
+#f8{
+    background: linear-gradient(to left , #c300ff,#ff00d4 );
+}
+#f9{
+    background: linear-gradient(to left , #ff0000,#6b0000 );
+}
+hr{
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.t1{
+    font-size: 20px;
+    font-weight: 400;
+}
+.t2{
+    margin-top: 10px;
+    color: #494848;
+}
+.event{
+    margin-left:20px;
+    width: 80%;
+}
+/*Pied de pagina*/
+.cont-mapa{
+    width: 100%;
+    height: 600px;
+    position: relative;
+    
+}
+
+.overlay {
+    position:absolute ;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7); /* Opacidad inicial */
+    transition: background-color 2s ease; /* Transición suave */
+    pointer-events: none; /* Permite hacer clic a través del overlay */
+}
+
+.cont-mapa:hover .overlay {
+    background-color: rgba(0, 0, 0, 0); /* Al pasar el cursor, la opacidad se hace 0 */
+}
+.cont-footer{
+    background-color: #13131d;
+    font-size: px;
+    color: #fff;
+    padding: 20px 0px 10px 50px;
+    align-items: center;
+
+
+}
+ol>li{
+    padding: 0px 20px;
+    margin: 10px 20px 10px; 
+    font-size: 18px;
+}
+.visita{
+    font-weight: 300;
+    font-size: 34px;
+}
+.links{
+    color: #afaeae;
+    padding: 10px;
+    font-weight: 300;
+}
+.links:hover{
+    cursor: pointer;
+    text-decoration:underline;
+    transition: all .5s;
+    color: #ffffff;
+}
+.logo-conalep{
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    justify-content: center;
+}
+.copi{
+    text-align: center;
+    color: #8a8989;
+    font-size: 16px;
+    font-weight: 300;
+}
+
+
+
+/*Contacto*/
+.cont-form{
+    width: 100%;
+    background-color: #fff;
+    padding-top: 150px;
+
+  }
+
+  .cont-level{
+    width: 100%;
+    display: flex;
+  }
+  .level{
+    width: 50%;
+    font-size: 18px;
+    color: #414040;
+    text-align: justify;
+    margin: 30px;
+  }
+  .level>h3{
+    font-size: 24px;
+    font-weight: 400;
+    margin-bottom: 10px;
+
+  }
+  .img-hist{
+    width: 95%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+
+  .grup-form {
+    background:linear-gradient(
+    50deg,
+    rgb(12, 12, 12)30%,
+    rgba(0, 0, 0, 0.4)
+    ),url(../img/texturA.jpg);
+    background-position:center;
+    background-size:cover;
+    background-repeat:no-repeat;
+    padding:50px;
+    width:1000px;
+    border-radius:10px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    }
+    
+    .grup-form h2{
+    color:#FFFFFF;
+    font-size:48px;
+    margin-bottom:25px;
+    font-weight: 400;
+    }
+    
+    form {
+    display:flex;
+    flex-direction:column;
+    width:50%;
+    }
+    
+    label{
+    font-size:16px;
+    color:#FFFFFF;
+    margin-bottom:10px;
+    }
+    
+    input,textarea{
+    padding:10px 14px;
+    background-color:#ebebeb;
+    border:0;
+    font-size:16px;
+    color:#323233;
+    margin-bottom:20px;
+    border-radius:5px;
+    }
+    
+    input:focus,textarea:focus{
+    outline:2px solid rgb(241, 75, 108);
+    }
+    
+    .boton1 {
+    background-color:#fa52a6;
+    width:150px;
+    color:#FFFFFF
+    }
+    
+    .boton1:hover {
+    background-color:rgb(241, 75, 108);
+    }
+    
+
+    @media (max-width: 768px) {
+        .fond{
+            margin: -820px -100px 0px 0px;
+           padding-top:50px ;
+           height: 85vh;
+        }
+        .cont-section{ 
+            display: flex;
+            flex-direction: column;
+            align-items: self-start;
+         
+        }
+        .text{
+            width: 100%;
+        }
+        .titles{
+            width: 100%;
+        }
+        
+        .img-section {
+            margin-bottom: 20px;
+            width: 85%;
+            margin-left: auto;
+            margin-right: au;
+        }
+        .section>p{
+            font-size: 14px;
+        }
+    
+        h1{
+            font-size: 25px;
+        }
+        .cont-text{
+            width: 80%;
+           
+        }
+        .titu{
+            font-size: 30px;
+        }
+        .pie{
+           
+            font-size: 14px;
+        }
+        .links{
+            font-size: 14px;
+        }
+       .frase{
+        font-size: 16px;
+       }
+       .ancla{
+        font-size: 14px;
+        padding: 5px;
+       }
+       .logo{
+        width: 35%;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 5px;
+        margin-bottom: 0px;
+        }
+        .grup-form h2{
+            font-size:30px;
+        }
+         form {
+            width:100%;
+        }     
+        label{
+             font-size:14px;
+                
+        }
+                
+        input,textarea{
+            padding:5px 14px;
+            font-size:14px;
+             border-radius:2px;
+            }
+                
+        input:focus,textarea:focus{
+                outline:1px solid rgb(241, 75, 108);
+         }
+         .boton1 {
+            width:100%;
+      
+        }
+        .grup-form{
+            padding: 20px;
+        }
+        .levels{
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        .fechs{
+            width: 100%;
+            
+        }
+        .cont-events{
+            width: 95%;
+           
+            padding: 10px;
+            
+        }
+
+        
+    
+        
+    }
